@@ -1,4 +1,4 @@
-
+import 'package:crud_trial/Constants/color_const.dart';
 import 'package:crud_trial/View/add_details.dart';
 import 'package:crud_trial/view/homepage.dart';
 import 'package:flutter/material.dart';
@@ -14,10 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.red
+          // primaryColor: ColorConst.redA
+          ),
       debugShowCheckedModeBanner: false,
       routes: {
-      "/home": (context) => Homepage(),
-      "/add":(context) => details(),
+        "/home": (context) => Homepage(),
+        "/add": (context) => details(),
       },
       initialRoute: '/home',
     );
